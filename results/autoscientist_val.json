@@ -1,0 +1,18 @@
+{
+  "n": 60,
+  "unparseable_outputs": 0,
+  "recall_ckd": 1.0,
+  "precision": 0.633,
+  "f1": 0.776,
+  "confusion_matrix": [
+    [
+      0,
+      22
+    ],
+    [
+      0,
+      38
+    ]
+  ],
+  "prompt_format": "chat template from adapter, enable_thinking=False, greedy decoding"
+}

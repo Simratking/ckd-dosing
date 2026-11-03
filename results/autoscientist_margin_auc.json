@@ -1,0 +1,5 @@
+{
+  "n": 60,
+  "roc_auc_from_margin": 0.9629,
+  "method": "log P('CKD') - log P('not CKD') for each prompt, same chat template, no threshold chosen"
+}
