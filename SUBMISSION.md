@@ -1,6 +1,6 @@
 # Submission: CKD detection + renal dose adjustment
 
-**Demo:** **[FILL: live link after deploying]**  **Code:** https://github.com/Simratking/ckd-dosing
+**Demo:** (https://ckd-dosing-eu8gc7stwsnhfvnj9n2k5m.streamlit.app/)  **Code:** https://github.com/Simratking/ckd-dosing. **Video:** https://drive.google.com/file/d/1NZ5b03KdefQbAxVB9Hg5wXta1G2KUtkd/view?usp=sharing
 
 Every number below comes from a file in `results/`. Items marked **[FILL]** depend on the AutoScientist model's result and are left blank on purpose.
 
