@@ -1,0 +1,13 @@
+== P1: 4 visits, eGFR slope -38.0 per year (RAPID DECLINE)
+   2025-07-15 -> 2026-01-15  metformin: Usual dose  ->  Maximum about 1000 mg/day
+   2025-07-15 -> 2026-01-15  gabapentin: 900 to 3600 mg/day  ->  400 to 1400 mg/day in 2 divided doses
+   2025-07-15 -> 2026-01-15  ibuprofen: Usual dose for the shortest course  ->  Avoid if possible; if used, lowest dose for the shortest time
+   2025-07-15 -> 2026-01-15  ciprofloxacin: Usual dose  ->  250 to 500 mg every 12 hours
+   2025-07-15 -> 2026-01-15  famotidine: Usual dose  ->  Halve the dose or extend the interval to every 36 to 48 hours
+   2026-01-15 -> 2026-07-15  metformin: Maximum about 1000 mg/day  ->  Contraindicated
+   2026-01-15 -> 2026-07-15  ibuprofen: Avoid if possible; if used, lowest dose for the shortest time  ->  Avoid
+   WARNING: Dose change suggested. Confirm with a repeat creatinine first: one reading can be skewed by acute illness or dehydration.
+   WARNING: eGFR is falling faster than 5 per year (rapid progression). Review with a clinician.
+== P2: 4 visits, eGFR slope -2.8 per year
+   no dose changes
+full timeline written to /Users/simrat/Desktop/Hackathons/CompleteORCA/Round2/ckd-dosing/results/dose_timeline.csv

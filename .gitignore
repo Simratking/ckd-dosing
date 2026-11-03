@@ -6,3 +6,4 @@ data/processed/*
 models/*
 !models/model.joblib
 adapter/
+.DS_Store

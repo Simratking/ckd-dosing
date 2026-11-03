@@ -1,0 +1,25 @@
+patient_id,date,egfr,stage,drug,dose,action
+P1,2025-01-15,86.2,G2,metformin,Usual dose,usual
+P1,2025-01-15,86.2,G2,gabapentin,900 to 3600 mg/day,usual
+P1,2025-01-15,86.2,G2,ibuprofen,Usual dose for the shortest course,usual
+P1,2025-07-15,62.9,G2,metformin,Usual dose,usual
+P1,2025-07-15,62.9,G2,gabapentin,900 to 3600 mg/day,usual
+P1,2025-07-15,62.9,G2,ibuprofen,Usual dose for the shortest course,usual
+P1,2026-01-15,42.3,G3b,metformin,Maximum about 1000 mg/day,reduce
+P1,2026-01-15,42.3,G3b,gabapentin,400 to 1400 mg/day in 2 divided doses,reduce
+P1,2026-01-15,42.3,G3b,ibuprofen,"Avoid if possible; if used, lowest dose for the shortest time",caution
+P1,2026-07-15,29.9,G4,metformin,Contraindicated,avoid
+P1,2026-07-15,29.9,G4,gabapentin,400 to 1400 mg/day in 2 divided doses,reduce
+P1,2026-07-15,29.9,G4,ibuprofen,Avoid,avoid
+P2,2025-01-20,87.0,G2,metformin,Usual dose,usual
+P2,2025-01-20,87.0,G2,gabapentin,900 to 3600 mg/day,usual
+P2,2025-01-20,87.0,G2,ibuprofen,Usual dose for the shortest course,usual
+P2,2025-07-20,87.0,G2,metformin,Usual dose,usual
+P2,2025-07-20,87.0,G2,gabapentin,900 to 3600 mg/day,usual
+P2,2025-07-20,87.0,G2,ibuprofen,Usual dose for the shortest course,usual
+P2,2026-01-20,75.0,G2,metformin,Usual dose,usual
+P2,2026-01-20,75.0,G2,gabapentin,900 to 3600 mg/day,usual
+P2,2026-01-20,75.0,G2,ibuprofen,Usual dose for the shortest course,usual
+P2,2026-07-20,86.4,G2,metformin,Usual dose,usual
+P2,2026-07-20,86.4,G2,gabapentin,900 to 3600 mg/day,usual
+P2,2026-07-20,86.4,G2,ibuprofen,Usual dose for the shortest course,usual

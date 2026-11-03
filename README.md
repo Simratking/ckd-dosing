@@ -22,8 +22,8 @@ Doses never come from an LLM. The agent code is deterministic; an LLM may only r
 python -m venv .venv
 # Windows PowerShell:  .venv\Scripts\Activate.ps1
 # macOS / Linux:       source .venv/bin/activate
-pip install -r requirements.txt
-python -m pytest            # 36 tests, should all pass
+pip install -r requirements-dev.txt
+python -m pytest            # 43 tests, should all pass
 ```
 
 Tabular training runs fine on CPU. You do not need the GPU.
@@ -39,9 +39,25 @@ Tabular training runs fine on CPU. You do not need the GPU.
 7. **Demo**: `streamlit run app.py`. Three made-up patients are built in (healthy, G3b, G5).
 8. **Deploy**: Streamlit Community Cloud or Hugging Face Spaces. Commit `models/model.joblib` (or retrain at startup) and `rules/dose_rules.json`.
 
+## What we trained with AutoScientist
+
+AutoScientist fine-tunes language models on prompt and completion text, so `scripts/make_llm_dataset.py` turns each patient into a text prompt with the answer "CKD" or "not CKD" (`data/llm/`). The platform's data-enhancement step changed 37 of 175 CKD labels to "not CKD", so we rejected it and trained on the original columns (`results/evolved_rows_check.json`). The model is Qwen3-4B-Base with LoRA; every setting is in `results/run_log.md`. Score its answers on the held-out test set with `python scripts/score_llm.py outputs.csv --baseline`. The full write-up is in `SUBMISSION.md`.
+
 ## Smoke testing without data
 
 `python scripts/make_synthetic.py` writes **invented** data to `data/raw/synthetic_ckd.csv`, and `python -m src.data_prep --raw data/raw/synthetic_ckd.csv` runs the pipeline on it. Never report numbers from it. Delete `data/processed`, `models` and `results` before the real run.
+
+## Changes over time
+
+`assess_history(visits, drugs)` in `src/history.py` takes dated visits (each with that visit's creatinine, weight and age), runs the normal assessment on each, and reports: per-drug dose changes between visits, stage changes, the eGFR slope per year, and a rapid-decline flag (falling by more than 5 per year). It warns that a dose change should be confirmed with a repeat creatinine. It also gives the dose needed at every visit for every drug.
+
+From a file: one row per visit with columns `date` (YYYY-MM-DD), `age`, `sex` (M/F), `sc` (creatinine mg/dL), and optionally `weight` and `patient_id` (several patients can share one file). See `examples/visits.csv`.
+
+```
+python -m src.history examples/visits.csv --drugs metformin,gabapentin,ibuprofen
+```
+
+This prints each patient's dose changes and writes the full per-visit timeline to `results/dose_timeline.csv`. The app's "Changes over time" section accepts the same CSV upload, or an editable visit table. The trend is a straight-line fit, so treat it as rough with only 2 or 3 visits. It does not forecast future eGFR.
 
 ## Optional LLM explanation
 
@@ -66,8 +82,10 @@ src/evaluate.py         test metrics + robustness
 src/egfr.py             CKD-EPI 2021, Cockcroft-Gault, stages
 src/dose_rules.py       lookup_dose_rule, check_contraindication
 src/agent.py            assess() + explain()
+src/history.py          dose changes across dated visits + eGFR trend
 src/cases.py            3 demo patients
-scripts/                download_data.py, make_synthetic.py
-tests/                  36 tests
+scripts/                download_data.py, make_synthetic.py, make_llm_dataset.py, score_llm.py, check_evolved*.py
+examples/visits.csv     made-up sample visits for 2 patients
+tests/                  43 tests
 results/run_log.md      fill this in as you go
 ```
