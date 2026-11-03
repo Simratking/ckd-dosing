@@ -1,0 +1,15 @@
+{
+  "rows": 400,
+  "features": 24,
+  "split_sizes": {
+    "train": 280,
+    "val": 60,
+    "test": 60
+  },
+  "ckd_counts": {
+    "train": 175,
+    "val": 38,
+    "test": 37
+  },
+  "missing_cells_pct": 10.5
+}

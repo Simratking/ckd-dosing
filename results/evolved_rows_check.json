@@ -1,0 +1,29 @@
+{
+  "rows_original": 280,
+  "rows_adapted": 278,
+  "original_text_in_file_matches_train_csv": 278,
+  "original_rows_dropped": 2,
+  "dropped_row_labels": {
+    "not CKD": 2
+  },
+  "duplicate_original_prompts_in_adapted_file": 0,
+  "enhanced_completion_not_exact_label": 0,
+  "enhanced_completion_differs_from_original_completion": 37,
+  "adapted_label_differs_from_train_csv_label": 37,
+  "rows_where_an_original_number_is_missing_from_enhanced_prompt": 278,
+  "rows_where_enhanced_prompt_has_extra_numbers": 0,
+  "rows_where_not_recorded_count_differs": 171,
+  "example_row_indexes_with_lost_numbers": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "enhanced_prompt_empty_rows": 278,
+  "flipped_labels_original_to_enhanced": {
+    "CKD -> not CKD": 37
+  },
+  "avg_words_original_prompt": 112.4,
+  "avg_words_enhanced_prompt": null
+}

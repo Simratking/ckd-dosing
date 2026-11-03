@@ -1,0 +1,11 @@
+{
+  "original_rows": 280,
+  "adapted_rows": 278,
+  "duplicate_prompts_in_original": 0,
+  "completions_not_exact_CKD_or_not_CKD": 0,
+  "bad_completion_examples": [],
+  "adapted_prompts_identical_to_an_original": 0,
+  "adapted_prompts_changed_or_unknown": 278,
+  "labels_changed_vs_original": 0,
+  "original_prompts_missing_from_adapted": 280
+}
